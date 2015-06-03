@@ -1,0 +1,172 @@
+/*********************************/
+/*       DEREK'S FRAMEWORK       */
+/*********************************/
+
+/* box-sizing (yay!) */
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* typography */
+body, html {
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    -webkit-font-smoothing: subpixel-antialiased; 
+}
+
+p {
+    font-family: "Georgia", "Palatino Linotype", "Palatino", serif;
+    font-size: 1.2em;
+    letter-spacing: 0em;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    font-family: LeagueSpartan;
+    margin: 0;
+    padding: .2em 0;
+    text-decoration: none;
+}
+
+h1 {line-height: 1em; font-size: 2em;}
+h2 {line-height: 1.75em; font-size: 1.5em;}
+h3 {line-height: 1.5em; font-size: 1.25em;}
+
+.responsive {
+    display: block;
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+input, button, textarea {
+    width: 100%;
+    font-family: LeagueSpartan;
+    font-size: 1.2em;
+    padding: 1em 0 .6em 0;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=phone], textarea {
+    border: 0;
+    background-color: rgba(239, 239, 239, 0.75);
+    margin: 0 0px 5px 0;
+}
+
+textarea {
+    min-height: 15em;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=phone]:focus, textarea:focus {
+    background-color: #f8f8f8;
+    outline: 0;
+    border: 0;
+}
+
+input[type=button], input[type=submit], button {
+    
+    color: #fff;
+    margin: 5px 0 5px 0;
+    border: 0;
+}
+
+input[type=button]:active, input[type=submit]:active, button:active {
+    background-image: url('overlay.png');
+}
+
+.primary {
+    background-color: #3595d1;
+}
+
+.danger {
+    background-color: #d13535;
+}
+
+.success {
+    background-color: #35d141;
+}
+
+.control {
+    background-color: #868686;
+}
+
+.desktop {
+    display: none;
+}
+
+/*desktop styles*/
+@media (min-width: 768px) {
+    
+    h1 {line-height: 1em; font-size: 3em;}
+    h2 {line-height: 1em; font-size: 2em;}
+    h3 { font-size: 1em;}
+    
+    
+    .container, header, section, footer {
+        width: 100%;
+    }
+    
+    .row {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+    
+    nav {
+        max-width: 940px;
+        margin: auto;
+    }
+    
+    nav a {
+        float: left;
+        width: 100px;
+        margin-right: 10px;
+    }
+    
+    .col {
+        display: table-cell;
+        vertical-align: top;
+    }
+    
+    .center {
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    section .row {
+        border-spacing: 5px 0;
+    }
+    
+    .desktop {
+        display: block;
+    }
+    
+    .mobile {
+        display: none;
+    }
+    
+    .col-1 { width: 8.333333%; }
+    .col-2, .eighth { width: 16.666667%; }
+    .col-3, .fourth { width: 25%; }
+    .col-4, .third { width: 33.333333%; }
+    .col-5 { width: 41.666667%; }
+    .col-6, .half { width: 50%; }
+    .col-7 { width: 58.333333%; }
+    .col-8, .two-thirds { width: 66.666667%; }
+    .col-9, .three-fourths { width: 75%; }
+    .col-10 { width: 83.333333%; }
+    .col-11 { width: 91.666667%; }
+    .col-12, .full { width: 100%; }
+}
