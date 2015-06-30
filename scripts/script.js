@@ -109,7 +109,7 @@ var CycleFitness = (function () {
                 }
             ],
             relevantEvents = [];
-        daysAhead = daysAhead || 20;
+        daysAhead = daysAhead || 200;
         events.forEach(function (event) {
             var i = 0,
                 eventDate;
