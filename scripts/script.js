@@ -116,7 +116,7 @@ var CycleFitness = (function () {
              //edit to change default number of days to pull events from
             for (i = 0; i < event.dates.length; i += 1) {
                 eventDate = Date.parse(event.dates[i]);
-                if (eventDate - date < (daysAhead * 86400000) && eventDate - date > 0) {
+                if (eventDate - date > 0) {
                     relevantEvents.push({
                         name: event.name,
                         type: event.type,
